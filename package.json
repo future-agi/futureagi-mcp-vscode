@@ -1,0 +1,55 @@
+{
+  "name": "futureagi-mcp",
+  "displayName": "Future AGI",
+  "description": "Connect to the Future AGI platform — run evaluations, manage datasets, search traces, optimize prompts, and simulate AI agents via MCP.",
+  "version": "0.1.0",
+  "publisher": "futureagi",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/future-agi/futureagi-mcp-vscode"
+  },
+  "homepage": "https://futureagi.com",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": [
+    "AI",
+    "Chat"
+  ],
+  "keywords": [
+    "mcp",
+    "model context protocol",
+    "ai",
+    "evaluation",
+    "observability",
+    "tracing",
+    "datasets",
+    "prompt optimization",
+    "agents",
+    "future agi",
+    "copilot"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "mcpServerDefinitionProviders": [
+      {
+        "id": "futureagi",
+        "label": "Future AGI"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.99.0",
+    "typescript": "^5.7.0",
+    "@vscode/vsce": "^3.0.0"
+  }
+}
